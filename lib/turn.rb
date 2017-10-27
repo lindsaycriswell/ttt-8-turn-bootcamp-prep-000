@@ -7,3 +7,11 @@ def display_board(board)
   puts row
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
+
+def position_taken?(board, index)
+  if board[index] == nil || board[index] == "" || board[index] == " "
+    false
+  elsif board[index] == "X" || board[index] == "O"
+    true
+  end
+end
